@@ -1,0 +1,10 @@
+<div class="tasks-header">
+  <h1 class="day"><%= Time.now.strftime("%A, #{Time.now.day.ordinalize}") %></h1>
+  <h2 class="month"><%= Time.now.strftime("%B") %></h2>
+  <%= link_to '+', new_task_path, class: 'new' %>
+</div>
+<ul class="tasks">
+  <% @tasks.each do |task| %>
+    <%= render partial: "task", locals: {task: task} %>
+  <% end %>
+</ul>

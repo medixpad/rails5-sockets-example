@@ -1,0 +1,8 @@
+<li data-task-id="<%= task.id %>">
+  <span class="completed"><%= check_box_tag('completed', '1', task.completed) %></span>
+  <span class="name"><%= task.title %></span>
+  <ul class="links list-inline">
+    <li><%= link_to 'Edit', edit_task_path(task.id) %></li>
+    <li><%= link_to 'Delete', task, method: :delete %></li>
+  </ul>
+</li>

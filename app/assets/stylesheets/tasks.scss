@@ -1,0 +1,110 @@
+.padded {
+    padding: 30px;
+}
+
+.tasks-container {
+    border-radius: 5px;
+    background: white;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    width: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .tasks-header {
+        @include gradient-vertical(#FFFFFF, #F9FAFF);
+        border-bottom: 1px solid #E6EDF4;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 30px;
+        position: relative;
+
+        h1 {
+            color: #6468FA;
+            margin: 0;
+            font-size: $font-size-h2;
+            font-weight: 100;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            color: rgba(0,0,0,0.4);
+            font-weight: normal;
+            font-size: $font-size-h4;
+            margin-bottom: 0;
+        }
+
+        a,
+        a:hover {
+            @include square(60px);
+            border-radius: 100%;
+            position: absolute;
+            bottom: -30px;
+            right: 15px;
+            background-color: $brand-primary;
+            color: white;
+            text-align: center;
+            font-size: $font-size-h1;
+            line-height: 52px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #6468FA;
+        }
+    }
+
+    ul.tasks {
+        margin: 0;
+        padding: 0;
+
+        > li {
+            list-style: none;
+            display: block;
+            margin: 0;
+            padding: 30px;
+            border-bottom: 1px solid #F1F5F9;
+            color: #72728c;
+            font-size: 16px;
+            position: relative;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            ul.links {
+                position: absolute;
+                margin-left: 23px;
+                display: none;
+
+                li {
+                    a {
+                        font-size: $font-size-small;
+                        color: $brand-primary;
+                    }
+                }
+            }
+
+            &:hover {
+                > ul.links {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include gradient-directional(#00c6ff, #0072ff);
+}
