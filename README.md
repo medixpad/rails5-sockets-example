@@ -1,24 +1,25 @@
-# README
+# Real time Rails 5 & Action Cable Task creation example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Installation
 
-Things you may want to cover:
+Clone the repo using the following command:
 
-* Ruby version
+```
+git clone https://github.com/smonetti/rails5-sockets-example.git
+```
 
-* System dependencies
+Install the gems, and initialize db by running:
 
-* Configuration
+```
+bundle install
+rake db:create && rake db:migrate
+```
 
-* Database creation
 
-* Database initialization
+Launch the app by running:
 
-* How to run the test suite
+```
+rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Visit the site at `http://localhost:3000`
